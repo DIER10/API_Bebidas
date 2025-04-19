@@ -27,7 +27,7 @@ menu: List[Bebida] = []
 @app.get("/menu", response_model=List[Bebida])
 async def obtener_menu():
     cursor = menu_collection.find({})
-    docs   = await cursor.to_list()
+    docs   = await cursor.to_list(length=100)
     return docs
 
 @app.post("/menu", response_model=Bebida, status_code=201)
