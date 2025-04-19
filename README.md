@@ -19,7 +19,7 @@ python3 -m venv venv
 pip install -r requirements.txt
 ```
 
-4. Ejecutar la API
+4. Ejecutar la API (desde la raíz del proyecto)
 ```bash
 uvicorn app.main:app --reload
 ```

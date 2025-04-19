@@ -8,7 +8,7 @@
 from typing import List
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from db import menu_collection
+from app.db import menu_collection
 
 class Bebida(BaseModel):
     name: str   = Field(..., min_length=1, description="Nombre de la bebida (no vacío)")
